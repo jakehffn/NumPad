@@ -32,7 +32,7 @@ char keys[ROWS][COLS] = {
 byte rowPins[ROWS] = {A1, A2, A0, 15};
 byte colPins[COLS] = {2, 3, 4, 5, 6}; 
 
-Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );;
+Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 bool numLock = false;
 
@@ -44,12 +44,12 @@ void setup() {
 void loop() {
 
     // Update key list and do if there are changes
-    if (kpd.getKeys()){  
+    if (kpd.getKeys()) {  
       
         // Iterate through updated keys
-        for (int i=0; i<LIST_MAX; i++){
+        for (int i=0; i<LIST_MAX; i++) {
           
-            if (kpd.key[i].stateChanged){
+            if (kpd.key[i].stateChanged) {
               
                 switch (kpd.key[i].kstate) { 
                   
@@ -57,14 +57,11 @@ void loop() {
                         Keyboard.press(kpd.key[i].kchar + 136);
                         break;
                         
-                    case HOLD:
-                        break;
-                        
                     case RELEASED:
                         Keyboard.release(kpd.key[i].kchar + 136);
                         break;
                         
-                    case IDLE:
+                    default:
                         break;
                 }
             }
