@@ -1,4 +1,4 @@
 # 3D Printed NumPad
-This is a pretty basic stand-alone number pad with all functionality.
+This is a pretty basic stand-alone number pad with all the expected functionality.
 
-Model fits the pro-micro arduino microcontroller and Cherry brand pcb-mounted stablizers.
+The model fits the pro-micro arduino microcontroller and Cherry brand pcb-mounted stablizers.
